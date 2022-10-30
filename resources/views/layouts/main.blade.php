@@ -11,12 +11,13 @@
     <div class="container mt-5">
         @include('inc.messages')
         <div class="row">
-            <div class="col-8">
+            <div class="col-12">
                 @yield('content')
             </div>
         </div>
         <div  class="row">
-          @include('inc.addForm')
+            <h3 class="mt-10">Добавить задание</h3>
+            @include('inc.addForm')
         </div>
     </div>
 </body>

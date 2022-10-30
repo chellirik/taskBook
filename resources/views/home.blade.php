@@ -6,6 +6,7 @@
 
 @section('content')
     <div class="row">
+        <h3> Сортировать</h3>
         <form action="/" method="get">
             <select name = "orderby" class="form-select form-select-lg-3 mb-3" aria-label="Поле сортировки">
                 <option value="name">Имя</option>
@@ -19,8 +20,12 @@
             <button type='submit' class="btn btn-success mt-3">Сортировать</button>
         </form>
     </div>
+
+    <div class="row">
+        
+    <h3 class="mt-10">Список заданий</h3>
     @foreach ($data as $el)
-        <div class="alert alert-info mt-3">
+        <div class="alert alert-info col-4 mt-3 mr-10">
             @if($el->done == 1)
                 <p>Задание выполнено</p>
             @endif
@@ -29,6 +34,7 @@
             <p>{{$el->message}}</p>
         </div>
     @endforeach
+    </div>   
 
     <div class="col-8">
         {{ $data->appends($_GET)->links()}}

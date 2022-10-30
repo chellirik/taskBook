@@ -8,7 +8,6 @@
           <i class="nav-icon fas fa-calendar-alt"></i>
           <p>
             Задачи
-            <span class="badge badge-info right">2</span>
           </p>
         </a>
       </li>

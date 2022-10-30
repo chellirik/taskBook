@@ -28,8 +28,12 @@
                                 <th>{{$item->name}}</th>
                                 <th>{{$item->email}}</th>
                                 <th>{{$item->message}}</th>
-                                <th>{{$item->done}}</th>
-                                <th><a href="{{ route('admin-task-edit', $item->id)}}" class="nav-link"><i class="nav-icon fas fa-pen-alt"></i></a></th>
+                                <th>
+                                @if ($item->done)
+                                <i class="fas fa-circle"></i>
+                                @endif
+                                </th>
+                                <th><a href="{{ route('admin-task-edit', $item->id)}}" class="nav-link"><i class="fas fa-pen-alt"></i></a></th>
                             </tr>   
                             @endforeach
                         </tbody>
