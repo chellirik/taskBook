@@ -4,10 +4,10 @@
            with font-awesome or any other icon font library -->
       <li class="nav-header">Панель администрирования</li>
       <li class="nav-item">
-        <a href="pages/calendar.html" class="nav-link">
+        <a href="/admin/task/" class="nav-link">
           <i class="nav-icon fas fa-calendar-alt"></i>
           <p>
-            Calendar
+            Задачи
             <span class="badge badge-info right">2</span>
           </p>
         </a>

@@ -23,6 +23,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('layouts.app');
+        //return view('layouts.app');     
+        if (auth()->user()) {        
+            return view('layouts.admin', ['data' => auth()->user()->name]);
+        }else{
+            return view('login');
+        }
     }
 }
