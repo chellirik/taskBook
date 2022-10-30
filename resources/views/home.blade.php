@@ -21,6 +21,9 @@
     </div>
     @foreach ($data as $el)
         <div class="alert alert-info mt-3">
+            @if($el->done == 1)
+                <p>Задание выполнено</p>
+            @endif
             <h3>{{ $el->name}}</h3>
             <p>{{ $el->email}}</p>
             <p>{{$el->message}}</p>
