@@ -36,4 +36,23 @@ class TaskController extends Controller
 
         return view('home',['data' => $task->orderBy($orderBy, $direction)->paginate(3)]);
     }
+
+    public function update($id,TaskRequest $req){
+
+        $task = Task::find($id);
+
+        $task->name = $req->input('name');
+        $task->email = $req->input('email');
+        $task->message = $req->input('message');
+        $task->name = $req->input('name');
+        if($req->input('done') != null && $req->input('done') == 'on'){ 
+            $task->done = 1;
+        }else{
+            $task->done = 0;
+        }
+
+        $task->save();
+
+        return redirect()->route('admin.task.index')->with('success', 'Задача успешно обновлена');
+    }
 }

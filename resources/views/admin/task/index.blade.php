@@ -19,6 +19,7 @@
                             <th>email</th>
                             <th>Описание задачи</th>
                             <th>Выполнено</th>
+                            <th>Редактировать</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -28,6 +29,7 @@
                                 <th>{{$item->email}}</th>
                                 <th>{{$item->message}}</th>
                                 <th>{{$item->done}}</th>
+                                <th><a href="{{ route('admin-task-edit', $item->id)}}" class="nav-link"><i class="nav-icon fas fa-pen-alt"></i></a></th>
                             </tr>   
                             @endforeach
                         </tbody>
@@ -37,6 +39,7 @@
                                 <th>email</th>
                                 <th>Описание задачи</th>
                                 <th>Выполнено</th>
+                                <th>Редактировать</th>
                             </tr>
                         </tfoot>
                       </table>

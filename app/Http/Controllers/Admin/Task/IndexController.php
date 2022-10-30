@@ -22,4 +22,9 @@ class IndexController extends Controller
 
         return view('admin.task.index', ['data' => $task->orderBy($orderBy, $direction)->paginate(3)]);
     }
+
+    public function editTask($id){
+        $task = new Task;
+        return view('admin.task.edit-task', ['data' => $task->find($id)]);
+    }
 }
